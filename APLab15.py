@@ -1,11 +1,4 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-
-def rgb2gray(rgb):
-    return np.dot(rgb[...,:3], [0.2989, 0.5870, 0.1140])
-
-img = mpimg.imread('image.png')     
-gray = rgb2gray(img)    
-plt.imshow(gray, cmap=plt.get_cmap('gray'), vmin=0, vmax=1)
-plt.show()
+import cv2 as cv
+import sys
+img=cv.imread("C:/Users/miriy/OneDrive/Pictures/Camera Roll/WIN_20221120_19_54_25_Pro.jpg",0)
+cv.imwrite("C:/Users/miriy/OneDrive/Pictures/Camera Roll/WIN_20221120_19_54_25_Pro.jpg")
